@@ -137,3 +137,9 @@ post '/urgent_task' do
 	redirect '/'
 end
 
+post '/delete_task' do 
+    task = Task.get(params[:delete])
+    task.destroy
+    redirect '/'
+end
+

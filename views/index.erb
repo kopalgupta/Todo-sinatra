@@ -59,6 +59,12 @@ tasks.each do |task|  %>
 	</form>
 	</article>
 
+	<article class="align">
+	<form action="/delete_task" method="POST">
+	<input type="hidden" name="delete" value="<%= task.id %>" >
+	<input type="submit" value="Delete" >
+	</form>
+	</article>
 	
 	</li>
 <% end %>
